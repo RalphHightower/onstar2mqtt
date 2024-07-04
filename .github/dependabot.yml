@@ -1,4 +1,5 @@
 version: 2
+
 updates:
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
@@ -8,4 +9,14 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "daily"
+    groups:
+      development-dependencies:
+        dependency-type: "development"
+      production-dependencies:
+        dependency-type: "production"
+        exclude-patterns:
+          - "onstarjs*"
+      onstarjs:
+        patterns:
+          - "onstarjs*"
