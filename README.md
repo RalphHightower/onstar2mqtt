@@ -1,4 +1,7 @@
 # onstar2mqtt
+
+**NOTE**: This service is no longer functional as the OnStar API has moved to TOTP backed auth. Work is in progress on converting to typescript and using the newer onstarjs2 library that includes TOTP compatibility.
+
 A service that utilizes the [OnStarJS](https://github.com/samrum/OnStarJS) library to expose OnStar data to MQTT topics.
 
 The functionality is mostly focused around EVs (specifically the Bolt EV), however PRs for other vehicle types are certainly welcome.
